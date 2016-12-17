@@ -121,3 +121,27 @@ a:active {  color: #161616;}
 .pinglun .mui-table-view-cell p.mui-ellipsis { height: 100px; word-break: normal; white-space: normal;}
 .pinglun .mui-table-view-cell:last-child:before, .mui-table-view-cell:last-child:after { display: none;}
 .pinglun .mui-table-view-cell.mui-active { background-color: none !important;} 
+
+
+/**
+ * 
+ *  li chen
+ * 
+ */
+.header-submit{background-color: #1b1b1b; color: #fff; border-radius: 17px; height: 30px;}
+.clear-input{display: block; width: 20px; height: 20px; background-image: url(../images/clearInput.png); background-repeat: no-repeat;    position: absolute;
+right: 18px;top: 50%;margin-top: -10px; background-size: contain;}
+.add-vote{background-color: #ededed; border: none; border: 0; border-radius: 28px;}
+.vote-form:after{background-color: transparent;}
+.underline-header{border-bottom: 1px solid #ebebeb;}
+.sub-menu{width: 34px; height: 6px; background-image: url(../images/menu_points.png); margin-top: 18px;}
+.mui-card-header-noline:after{background-color: transparent;}
+.user-gender{width: 29px; height: 18px; background-image: url(../images/gender.png); background-repeat: no-repeat; background-size: contain;}
+.user-location{color: #cdcdcd;}
+.user-location-icon{float: left; font-size: 16px; color: #cdcdcd;}
+.user-time{color: #cdcdcd;}
+.vote-body{padding: 24px 12px 0;}
+.image-icon{height: 20px; margin-right: 10px;}
+.vote-option{text-align: initial; text-indent: 48px; padding: 10px 0; border-color: transparent; border-radius: 24px; font-size: 16px; line-height: 1.44; background-color: #f3f3f3; position: relative;}
+.vote-option .mui-icon{position: absolute; left: 14px; width: 25px; height: 25px; border-radius: 50%; background-color: #000; top: 50%; margin-top: -12px;}
+.vote-option .mui-icon:before{content:'';position: absolute; width: 16px; height: 12px; left: 50%; top: 50%; margin-left: -8px; margin-top: -6px; background-image: url(../images/selected.png); background-size: contain; background-repeat: no-repeat;}
