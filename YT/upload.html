@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Uploader Example</title> 
+	<link rel="stylesheet" href="css/mui.css" />
+	<link rel="stylesheet" href="css/cropper.css" />
+	<script type="text/javascript" src="js/mui.min.js"></script>
+	<script> mui.init(); </script>
+	</head> 
+	<body >
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">dadas</h1>
+		</header>
+		
+		<a href="#picture"><div id="changeAvatar"></div></a>
+		<div id="showEdit">
+	        <header class="mui-bar mui-bar-nav mui-nav-bg" style="background:none; position:absolute; top:0;">
+	            <a class="mui-icon iconfont icon-roundclosefill mui-pull-left" style="color:#ffffff; font-size:36px;" onclick="closeEdit();"></a>
+	            <a class="mui-icon iconfont icon-roundcheckfill mui-pull-right" style="color:#ffffff; font-size:36px;" onclick="confirm();"></a>
+	        </header>
+	        <div id="report"></div>
+	    </div>
+	        
+		
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/cropper.js"></script>
+		
+		<script>
+			//拍照
+function getImage() {
+    var cmr = plus.camera.getCamera();
+    cmr.captureImage( function (p) {
+        plus.io.resolveLocalFileSystemURL( p, function ( entry ) {    
+            var localurl = entry.toLocalURL();//
+            $("#report").html('<img src="'+localurl+'">');
+            cutImg();
+            mui('#picture').popover('toggle');
+        });
+    });
+}
+//相册选取
+function galleryImgs(){
+    plus.gallery.pick( function(e){
+        $("#report").html('<img src="'+e.files[0]+'">');
+        cutImg();
+        mui('#picture').popover('toggle');
+    }, function ( e ) {
+        //outSet( "取消选择图片" );
+    },{filter:"image",multiple:true});
+}
+
+function cutImg(){  
+    $("#showEdit").fadeIn();
+    var $image = $('#report > img');
+    $image.cropper({
+      aspectRatio: 1 / 1,
+      autoCropArea: 0.8
+    });
+}
+
+function confirm(){
+
+    $("#showEdit").fadeOut();
+    var $image = $('#report > img');
+    var dataURL = $image.cropper("getDataURL");
+    $("#changeAvatar").html('<img src="'+dataURL+'" />');
+}
+
+function postAvatar() {
+
+    var $image = $('#report > img');
+    var dataURL = $image.cropper("getDataURL");
+    var data = {
+            base64: dataURL
+    };
+    $.post(url,data,function(data){
+        //这里就自己写了哈
+    });
+};
+
+
+		</script>
+	</body>
+</html>
