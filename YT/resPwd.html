@@ -24,18 +24,16 @@
 
 			<form class="mui-input-group login-from">
 				<div class="mui-input-row">
-					<input type="text" class="mui-input-clear" placeholder="手机号">
+					<input type="tel" id="phpne" class="mui-input-clear" placeholder="手机号">
 				</div>
 				<div class="mui-input-row">
-					<input type="text" class="mui-input-clear" placeholder="验证码">
+					<input type="tel" class="mui-input" id="codeM" placeholder="验证码">
 					<input type="button" onclick="settime(this);" class="reg_code" value="免费获取验证码" />
 				</div>
 				<div class="mui-input-row">
-					<input type="password" class="mui-input-clear" placeholder="新密码">
+					<input type="password" id="paw" class="mui-input-clear" placeholder="密码">
 				</div>
-				<br />
-				<a class="login-btn" id="loginBtn"><span class="mui-icon mui-icon-checkmarkempty"></span></a>
-
+				<a class="login-btn" id="regBtns"><span class="mui-icon mui-icon-checkmarkempty"></span></a>
 				<div class="login-link">
 					注册表示同意用户
 					<a class="color-lv" href="#">服务与用户使用权益</a>
@@ -43,34 +41,138 @@
 			</form>
 		</div>
 		<script type="text/javascript">
+				var webUrl 
 			mui.plusReady(function() {
-				//
+				webUrl = plus.storage.getItem("web"); 
 				plus.screen.lockOrientation("portrait-primary");
-
-				document.getElementById("loginBtn").addEventListener('tap', function() {
-					mui.openWindow('login.html', 'index', {})
+				document.getElementById("regBtns").addEventListener('tap', function() {
+					var u = document.getElementById("phpne").value;
+					var p = document.getElementById("paw").value;
+					var codeM = document.getElementById("codeM").value;
+					if(!!!u){
+						mui.toast("请输入正确手机号哦");
+						return;
+					}else if(!!!codeM){
+						mui.toast("请输入验证码哦");
+						return;
+					}else if(!!!p){
+						mui.toast("请输入密码哦");
+						return;
+					}else{
+						
+							
+						var user = {
+								phone:u,
+								password:p,
+								userInfo:{
+									userUserCode:codeY
+								}
+						} 
+						
+						console.log("注册提交数据"+JSON.stringify(user));
+						console.log(webUrl+"/moblie/user/register/"+codeM);
+						mui.ajax(webUrl+"/moblie/user/register/"+codeM,{
+							data:JSON.stringify(user),
+							dataType:'json',//服务器返回json格式数据
+							type:'post',//HTTP请求类型
+							headers:{'Content-type': 'application/json;charset=UTF-8'},	              
+							success:function(data){
+								//服务器返回响应，根据响应结果，分析是否登录成功；
+								console.log("注册成功返回JSON:"+JSON.stringify(data));
+								
+								var minfo = JSON.stringify(data.message)
+								minfo = minfo.replace("\"","");
+								minfo = minfo.replace("\"","");
+								
+								mui.toast(minfo); 
+								
+							},
+							error:function(xhr,type,errorThrown){
+								//异常处理；
+								console.log("e"+type);
+							}
+						});
+						
+						
+						
+					}
+					
+					
 				});
-
+	
 			});
-		</script>
 
-		<script type="text/javascript">
-			var countdown = 60;
 
+
+
+
+/*******************发送验证码**********************/
+	var countdown = 10;
+			var send_time=true;
 			function settime(val) {
+				if(send_time){
+					var regPhone = 	document.getElementById("phpne").value;
+					if(!(/^1(3|4|5|7|8)\d{9}$/.test(regPhone))){
+						mui.toast("请输入正确手机号哦");
+						return;
+					}else{
+							//发送验证码 
+							console.log("验证码提交地址:"+webUrl+"/moblie/user/authCode/2/"+regPhone)
+							mui.ajax(webUrl+"/moblie/user/authCode/2/"+regPhone,{
+									dataType:'json',//服务器返回json格式数据
+									type:'post',//HTTP请求类型
+									headers:{'Content-type': 'application/json;charset=UTF-8'},	              
+									success:function(data){
+										//服务器返回响应，根据响应结果，分析是否登录成功；
+		//								var minfo = JSON.stringify(data.message)
+		//								minfo = minfo.replace("\"","");
+		//								minfo = minfo.replace("\"","");
+										console.log(JSON.stringify(data));
+										if(data.success){
+											mui.toast("发送成功，注意查收"); 
+										}
+										
+										
+									},
+									error:function(xhr,type,errorThrown){
+										//异常处理；
+										console.log("e"+type);
+									}
+								});
+						
+					}
+					
+				}
 				if(countdown == 0) { 
-					//val.removeAttribute("disabled");
-					val.innerHTML = "免费获取验证码";
-					countdown = 60;
+					val.removeAttribute("disabled");
+					val.value = "免费获取验证码";
+					countdown = 10;
+					send_time=true;
+				
+					return;
 				} else {
 					val.setAttribute("disabled", true);
 					val.value = countdown + "S后重新获取";
 					countdown--;
+					send_time=false;
 				}
 				setTimeout(function() {
 					settime(val)
 				}, 1000)
+				
+				
+				
+				
 			}
+			
+		
+						
+						
+	/*******************发送验证码**********************/ 
+	
+	
+	
+			
 		</script>
 
 	</body>

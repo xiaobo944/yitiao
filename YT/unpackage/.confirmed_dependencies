@@ -1,1 +1,60 @@
-null
+{
+  "tools/AddCont.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/logoM.png",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "login.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/logoM.png",
+      "css/mui.css"
+    ],
+    "refer": [
+      "register.html",
+      "resPwd.html",
+      "index.html"
+    ]
+  },
+  "resPwd.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "index.html": {
+    "resources": [
+      "images/sex_02_age.png",
+      "images/user.png",
+      "images/jinghua.png",
+      "images/x.png",
+      "images/tag_yuanlao.png",
+      "images/nav_02.png",
+      "images/banner_01.jpg",
+      "images/nav_03.png",
+      "images/area.png",
+      "images/nav_01.png",
+      "images/nav_04.png",
+      "images/yan.png",
+      "images/pic_1.png",
+      "images/pic_3.png",
+      "images/pic_2.png",
+      "images/msg.png",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/mui.min.js",
+      "css/app.css"
+    ],
+    "refer": []
+  }
+}
