@@ -15,7 +15,9 @@
 	<header class="mui-bar mui-bar-nav login-header underline-header">
 	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 	    <h1 class="mui-title">投票详情</h1>
-	    <a href="javascript:;" class="mui-pull-right sub-menu"></a>
+	    <a href="javascript:;" class="mui-pull-right sub-menu" id="report">
+	    </a>
+	    <a href="javascript:;" class="report">举报</a>
 	</header>
 	<div class="mui-content vote-main">
 	    <div class="mui-card">
@@ -29,7 +31,7 @@
 						</div>
 						<h3>JOHN毕钧瑞</h3>
 						<div class="user-tag">
-							<span class="user-age-t user-gender"></span>
+							<span class="user-age-t user-age-man">21</span>
 							<i class="mui-icon mui-icon-location user-location-icon"></i>
 							<span class="user-time user-location">北京</span>
 						</div>
@@ -37,9 +39,9 @@
 	    	</div>
 	    	<div class="mui-card-content vote-body">
 	    		<img src="images/graphic.png" class="mui-pull-left image-icon"/><h4 contenteditable="vote-title">M一定要认主么</h1>
-	    		<a href="javascript:;" class="mui-btn mui-btn-block vote-option necess">必须的</a>
-	    		<a href="javascript:;" class="mui-btn mui-btn-block vote-option no-neccess-avtive"><i class="mui-icon vote-option-active"></i>看心情</a>
-	    		<a href="javascript:;" class="mui-btn mui-btn-block vote-option self-active">自己玩呗<span class="nums">800人</span></a>
+	    		<a href="javascript:;" class="mui-btn mui-btn-block vote-option ">必须的<span class="nums">800人</span></a>
+	    		<a href="javascript:;" class="mui-btn mui-btn-block vote-option active "><i class="mui-icon"></i>看心情<span class="nums">800人</span></a>
+	    		<a href="javascript:;" class="mui-btn mui-btn-block vote-option ">自己玩呗<span class="nums">800人</span></a>
 	    		<div class="mui-row reward-row">
 	    			<a href="#" class="user-thumb reward-user">
 	    				<img src="images/user.png" alt="" />
@@ -221,9 +223,63 @@
 	    	</div>
 	    </div>
 	</div>
-		
-		
 	
+	<div id="reward-modal" class="modal-mask">
+		<div class="modal-window">
+			<a href="javascript:;" class="close-modal"></a>
+			<img src="images/user.png" alt="" />
+			<p class="reward-money"><span>¥</span>10</p>
+			<p>随机打赏小于10元</p>
+			<div class="pay-method">
+				<div class="mui-input-row mui-radio mui-left">
+				<label>微信支付</label>
+				<input name="radio1" type="radio">
+				</div> 
+				<div class="mui-input-row mui-radio mui-left">
+					<label>支付宝支付</label>
+					<input name="radio1" type="radio">
+				</div> 
+			</div>
+			<div class="reward-btn modal-reward-btn">
+				<a href="javascript:;" class="btn">打赏</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="report-modal" class="modal-mask">
+		<div class="modal-window">
+			<a href="javascript:;" class="mui-btn mui-btn-block">举报</a>
+			<a href="javascript:;" class="mui-btn mui-btn-block">取消</a>
+		</div>
+	</div>
+		
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript">
+		   
+		mui.plusReady(function(){
+			
+			$('#reward').on('tap',function(){
+				$('#reward-modal').show().addClass('show');
+				$('.close-modal').off('tap').on('tap',function(e) {
+					$('#reward-modal').hide().addClass('show');
+					e.stopPropagation();
+				});
+				$('.close-modal').off('touchend').on('touchend',function(e) {
+					e.preventDefault();
+				});
+			}); 
+			
+			$('#report').on('tap',function() {
+				$('.report').show();
+				$('.report').off('tap').on('tap',function() {
+					$('#report-modal').show();
+				});
+			});
+						
+		});
+		
+	</script>
 	
 	
 

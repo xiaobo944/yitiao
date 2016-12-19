@@ -1,1 +1,49 @@
-null
+{
+  "voteDetail.html": {
+    "resources": [
+      "images/sex_02_age.png",
+      "images/user.png",
+      "images/good.png",
+      "images/star.png",
+      "fonts/mui.ttf",
+      "images/tag_yuanlao.png",
+      "images/selected.png",
+      "css/mui.css",
+      "images/good_black.png",
+      "images/menu_points.png",
+      "js/mui.min.js",
+      "css/app.css",
+      "images/vertical_points.png",
+      "images/graphic.png",
+      "images/gender.png",
+      "images/icon_triangle.png",
+      "images/dr.png",
+      "images/close.png"
+    ],
+    "refer": []
+  },
+  "postDetail.html": {
+    "resources": [
+      "images/sex_02_age.png",
+      "images/user.png",
+      "images/prture.png",
+      "images/good.png",
+      "images/star.png",
+      "fonts/mui.ttf",
+      "images/tag_yuanlao.png",
+      "css/mui.css",
+      "images/heart.png",
+      "images/menu_points.png",
+      "js/mui.min.js",
+      "css/app.css",
+      "images/vertical_points.png",
+      "images/gender.png",
+      "images/icon_triangle.png",
+      "images/dr.png",
+      "js/touch.js",
+      "js/zepto.min.js",
+      "images/close.png"
+    ],
+    "refer": []
+  }
+}
