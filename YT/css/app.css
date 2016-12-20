@@ -135,7 +135,7 @@ right: 18px;top: 50%;margin-top: -10px; background-size: contain;}
 .add-vote{background-color: #ededed; border: none; border: 0; border-radius: 28px;}
 .vote-form:after{background-color: transparent;}
 .underline-header{border-bottom: 1px solid #ebebeb;}
-.sub-menu{width: 34px; height: 6px; background-image: url(../images/menu_points.png); margin-top: 18px; position: relative;}
+.sub-menu{width: 34px; height: 100%; background-image: url(../images/menu_points.png); margin-top: 18px; position: relative; background-repeat: no-repeat;} 
 .report{display: block; width: 100px; height: 30px; line-height: 30px; text-align: center; position: absolute; right: 0; top: 36px; color: #333333; font-size: 14px; z-index: 888; background-color: #fff; border-radius: 15px;}
 .mui-card-header-noline:after{background-color: transparent;}
 .user-gender{width: 29px; height: 18px; background-image: url(../images/gender.png); background-repeat: no-repeat; background-size: contain;}
@@ -198,22 +198,23 @@ right: 18px;top: 50%;margin-top: -10px; background-size: contain;}
 .post-body img {max-width: 100%;}
 
 
-.modal-mask{position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,.4); z-index: 999; display: none;}
-#reward-modal .modal-window{width: 322px; height: 252px; background-color: #fff; position: absolute; top: 50%; left: 50%; margin-left: -161px; margin-top: -126px; border-radius: 5px; display: flex; display: -ms-flexbox; display: -webkit-flex; flex-direction: column; align-items: center; padding-top: 5px;}
-#reward-modal .close-modal{display: block; width: 15px; height: 15px; background-size: contain; background: url(../images/close.png) no-repeat; position: absolute; top: 10px; left: 10px;}
-#reward-modal .reward-money{font-size: 30px; color: #fd4d4d; margin-top: 5px;}
-#reward-modal .reward-money > span{font-size: 20px;}
-#reward-modal .pay-method{display: flex; display: -ms-flexbox; display: -webkit-flex; font-size: 14px;}
+/*.modal-mask{position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0,0,0,.4); z-index: 999; }*/
+.reward-modal .modal-window{width: 322px; height: 252px; background-color: #fff; position: absolute; top: 50%; left: 50%; margin-left: -161px; margin-top: -126px; border-radius: 5px; display: flex; display: -ms-flexbox; display: -webkit-flex; flex-direction: column; align-items: center; padding-top: 5px;}
+.reward-modal .close-modal{display: block; width: 15px; height: 15px; background-size: contain; background: url(../images/close.png) no-repeat; position: absolute; top: 10px; left: 10px;}
+.reward-modal .reward-money{font-size: 30px; color: #fd4d4d; margin-top: 5px;}
+.reward-modal .reward-money > span{font-size: 20px;}
+.reward-modal .pay-method{font-size: 14px;}
+.reward-modal .pay-method .mui-input-row{display: inline-block; margin: 0;}
+.reward-modal .pay-method label{margin: 0;}
+.reward-modal .modal-reward-btn .btn{width: 100px; height: 36px; line-height: 36px;}
+.reward-modal .mui-radio input[type='radio']:checked:before{color: #333333;}
+.reward-modal.show .modal-window{animation: modal-show .3s ease-in; -webkit-animation: modal-show .3s ease-in;}
 
-#reward-modal .modal-reward-btn .btn{width: 100px; height: 36px; line-height: 36px;}
-#reward-modal .mui-radio input[type='radio']:checked:before{color: #333333;}
-#reward-modal.show .modal-window{animation: modal-show .3s ease-in; -webkit-animation: modal-show .3s ease-in;}
 
-
-#report-modal .modal-window{position: absolute; bottom: 50px; width: 90%; height: 120px; background-color: #fff; border-radius: 20px; overflow: hidden; left: 50%; transform: translateX(-50%);}
-#report-modal .modal-window .mui-btn{margin: 0; height: 50%; border: none;}
-#report-modal .modal-window .mui-btn:first-child{border-bottom: 1px solid #c3c3c3; color: #ea5656;}
-#report-modal.show .modal-window{animation: report-show .3s ease-in; -webkit-animation: report-show .3s ease-in;}
+.report-modal .modal-window{position: absolute; bottom: 50px; width: 90%; height: 120px; background-color: #fff; border-radius: 20px; overflow: hidden; left: 50%; transform: translateX(-50%);}
+.report-modal .modal-window .mui-btn{margin: 0; height: 50%; border: none;}
+.report-modal .modal-window .mui-btn:first-child{border-bottom: 1px solid #c3c3c3; color: #ea5656;}
+.report-modal.show .modal-window{animation: report-show .3s ease-in; -webkit-animation: report-show .3s ease-in;}
 
 .report{display: none;}
 

@@ -18,7 +18,12 @@
       "images/gender.png",
       "images/icon_triangle.png",
       "images/dr.png",
-      "images/close.png"
+      "images/close.png",
+      "js/touch.js",
+      "images/good_hover.png",
+      "js/zepto.min.js",
+      "js/layer.js",
+      "css/layer.css"
     ],
     "refer": []
   },

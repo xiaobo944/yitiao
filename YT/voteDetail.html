@@ -6,6 +6,7 @@
     <title></title>
     <script src="js/mui.min.js"></script>
     <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/layer.css" />
     <link rel="stylesheet" href="css/app.css" />
     <script type="text/javascript" charset="utf-8">
       	mui.init();
@@ -224,7 +225,7 @@
 	    </div>
 	</div>
 	
-	<div id="reward-modal" class="modal-mask">
+	<div class="reward-modal modal-mask" style="display: none;">
 		<div class="modal-window">
 			<a href="javascript:;" class="close-modal"></a>
 			<img src="images/user.png" alt="" />
@@ -246,7 +247,7 @@
 		</div>
 	</div>
 	
-	<div id="report-modal" class="modal-mask">
+	<div id="report-modal" class="modal-mask" style="display: none;">
 		<div class="modal-window">
 			<a href="javascript:;" class="mui-btn mui-btn-block">举报</a>
 			<a href="javascript:;" class="mui-btn mui-btn-block">取消</a>
@@ -255,26 +256,41 @@
 		
 	<script type="text/javascript" src="js/zepto.min.js"></script>
 	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/layer.js"></script>
 	<script type="text/javascript">
 		   
 		mui.plusReady(function(){
 			
-			$('#reward').on('tap',function(){
-				$('#reward-modal').show().addClass('show');
-				$('.close-modal').off('tap').on('tap',function(e) {
-					$('#reward-modal').hide().addClass('show');
-					e.stopPropagation();
+			
+			$('#reward').on('tap',function(e){
+				layer.open({
+					  type : 0,
+					  content:'<div class="modal-window"><img src="images/user.png" alt="" /><p class="reward-money"><span>¥</span>10</p><p>随机打赏小于10元</p><div class="pay-method"><div class="mui-input-row mui-radio mui-left"><label>微信支付</label><input name="radio1" type="radio"></div> <div class="mui-input-row mui-radio mui-left"><label>支付宝支付</label><input name="radio1" type="radio"></div></div><div class="reward-btn modal-reward-btn"><a href="javascript:;" class="btn">打赏</a></div></div>',
+					  className : 'reward-modal'
 				});
-				$('.close-modal').off('touchend').on('touchend',function(e) {
-					e.preventDefault();
-				});
+				e.stopPropagation();
 			}); 
+			
+			$('#reward').on('touchend',function(e){
+				e.preventDefault();
+			});
 			
 			$('#report').on('tap',function() {
 				$('.report').show();
 				$('.report').off('tap').on('tap',function() {
-					$(this).hide();
-					$('#report-modal').show();
+					//底部对话框
+					  layer.open({
+					  	content : '举报',
+					    btn: ['举报', '取消']
+					    ,skin: 'footer'
+					    ,yes: function(index){
+					      layer.open({content: '执行删除操作'})
+					    }
+					  });
+					  $('.report').hide();
+				});
+				$('.report').on('touchend', function(e) {
+					e.preventDefault();
 				});
 			});
 						
