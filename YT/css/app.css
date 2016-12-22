@@ -218,26 +218,29 @@ right: 18px;top: 50%;margin-top: -10px; background-size: contain;}
 
 .report{display: none;}
 
+.ellipse{width: 65px; height: 25px; background-color: #f7f7f7; font-size: 12px; text-align: center; border-radius: 15px; border: 1px solid #dedede; line-height: 25px; color: #666666; position: relative;}
+.ellipse.location{width: auto; padding-left: 20px; padding-right: 10px;}
+.ellipse.location:after{content: ''; position: absolute; width: 16px; height: 12px; background: url(../images/location.png) no-repeat; left: 6px; top: 50%; margin-top: -8px; background-size: contain;}
+.ellipse > ul{position: absolute; width: 104%; height: 50px; margin: 0; padding: 0; top: -1px; left: -1px; border-radius: 10px; background: #f7f7f7; border: 1px solid #e5e5e5; display: none;}
+.ellipse > ul li:first-child{border-bottom: 1px solid #e5e5e5;}
+.content-btn{width: 25px; height: 25px; background-color: #f7f7f7; border-radius: 50%; margin: 0 5px; position: relative;}
+.content-btn:after{content: ''; position: absolute; width: 15px; height: 13px; top: 50%; left: 50%; transform: translate(-50%,-50%); background-size: contain;}
+#add-images:after{background: url(../images/imgs.png) no-repeat;}
+#add-emojis:after{background: url(../images/emoji.png) no-repeat;}
 
-@-webkit-keyframes modal-show{
-	0% {
-		transform: translateY(-100%);
-		opacity: 0;
-	}
-	100%{
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-@keyframes modal-show{
-	0% {
-		transform: translateY(-100%);
-		opacity: 0;
-	}
-	100%{
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
+#contentForm {width: 93.33%; margin: 0 auto;}
+#contentForm:after{display: none;}
+#contentForm input[type=text],#contentForm textarea{border: 1px solid #ededed; font-size: 14px;}
+#contentForm textarea{height: 220px;}
+#contentForm input[type=text]{border-bottom: none;}
+#contentForm .mui-input-row{height: auto;}
+#contentForm .mui-input-row:after{display: none;}
+#contentForm .mui-row:after{display: none;}
 
-
+.location-box .head{width: 96%; margin: 0 auto;}
+.location-box input[type=text]{width: 80%; background: #f8f8f8; border: none; height: 20px; border-radius: 20px; font-size: 14px;}
+.location-box .head > a{color: #333333; margin-left: 10px;}
+.location-box ul{width: 96%; margin: 0 auto; padding: 0;}
+.location-box  li {margin: 20px 0; text-align: left; padding: 0; position: relative;}
+.location-box  li.on{color: #488379;}
+.location-box  li.on:after{content: ''; width: 22px; height: 12px; background: url(../images/location_on.png) no-repeat; position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-size: contain;}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="../css/mui.css" rel="stylesheet"/>
+    <script src="../js/mui.min.js"></script>
+    <link rel="stylesheet" href="../css/layer.css" />
+    <link rel="stylesheet" href="../css/app.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav login-header">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">发布新帖</h1>
+	    <a href="#" class="mui-pull-right mui-btn header-submit">发送</a>
+	</header>
+	<div class="mui-content" style="background-color: #fff;">
+		
+		<form class="mui-input-group login-from" id="contentForm">
+			   	<div class="mui-input-row">
+			   		<input type="text" name="title" placeholder="标题(4~14个字)" />
+			   	</div>
+			   	<div class="mui-input-row">
+			   		<textarea name="content" placeholder="请勿发布违法的内容，会被删除或禁言哦"></textarea>
+			   	</div>
+			     
+			     <div class="mui-row">
+			     	<span class="mui-pull-left ellipse location">北京</span>
+			     	<a href="javascript:;" id="add-emojis" class="content-btn mui-pull-right"></a>
+			     	<a href="javascript:;" id="add-images" class="content-btn mui-pull-right"></a>
+			     	<span class="mui-pull-right ellipse status" id="status">公开
+			     		<ul>
+			     			<li>公开</li>
+			     			<li>私密</li>
+			     		</ul>
+			     	</span>
+			     </div>
+			     
+		</form>
+	</div>
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/touch.js"></script>
+	<script type="text/javascript" src="../js/layer.js"></script>
+	<script type="text/javascript">
+		mui.plusReady(function() {
+			
+			$('.location').on('tap', function() {
+				  layer.open({
+				    type: 1
+				    ,content: '<div class="head"><input type="text" placeholder="搜索附近位置"><a class="cancel">取消</a></div><ul><li class="on">不显示地理位置</li><li>北京市</li><li>798艺术区</li></ul>'
+				    ,anim: 'up'
+				    ,style: 'position:fixed; bottom:0; left:0; width: 100%; height:80%; padding:10px 0; border:none;',
+				    className : 'location-box'
+				  });
+				  $('.cancel').on('tap', function() {
+				  	layer.closeAll()
+				  });
+				  $('.cancel').on('touchend', function(e) {
+				  	e.preventDefault();
+				  });
+			});
+			
+			$('.location').on('touchend', function(e){
+				e.preventDefault();
+			});
+			
+			$('#status').on('tap', function(e) {
+				if($('.ellipse > ul').css('display') == 'none') {
+					$('.ellipse > ul').show();
+				} else {
+					$('.ellipse > ul').hide();
+				}
+				e.preventDefault();
+			});
+			
+			$('#status').on('touchend',function(e){
+				e.preventDefault();
+			});
+		});
+	</script>
+</body>
+</html>

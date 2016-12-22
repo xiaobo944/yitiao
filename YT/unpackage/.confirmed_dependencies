@@ -47,7 +47,55 @@
       "images/dr.png",
       "js/touch.js",
       "js/zepto.min.js",
-      "images/close.png"
+      "images/close.png",
+      "css/layer.css",
+      "images/good_hover.png",
+      "js/layer.js"
+    ],
+    "refer": []
+  },
+  "tools/AddCont.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/clearInput.png",
+      "css/mui.css",
+      "images/location.png"
+    ],
+    "refer": []
+  },
+  "tools/releaseContent.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/clearInput.png",
+      "images/location.png",
+      "css/mui.css",
+      "images/imgs.png",
+      "images/emoji.png",
+      "js/zepto.min.js",
+      "js/touch.js",
+      "css/layer.css",
+      "js/layer.js",
+      "images/location_on.png"
+    ],
+    "refer": []
+  },
+  "tools/releastVote.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/clearInput.png",
+      "images/location.png",
+      "css/mui.css",
+      "js/zepto.min.js",
+      "js/layer.js",
+      "js/touch.js",
+      "css/layer.css",
+      "images/location_on.png"
     ],
     "refer": []
   }
