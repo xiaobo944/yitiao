@@ -26,10 +26,10 @@
 	 
 			    </div> 
 			    <div class="mui-input-row">
-			        <input type="password" value="" class="mui-input-clear" placeholder="选项一,请输入15字以内描述">
+			        <input type="password" value="" class="mui-input-clear" placeholder="选项1,请输入15字以内描述">
 			    </div>
 			    <div class="mui-input-row">
-			        <input type="password" value="" class="mui-input-clear" placeholder="选项二,请输入15字以内描述">
+			        <input type="password" value="" class="mui-input-clear" placeholder="选项2,请输入15字以内描述">
 			    </div>
 			    
 			     <a  class="mui-btn mui-btn-block add-vote"><i class="mui-icon mui-icon-plusempty"></i>新建投票选项</a>
@@ -48,7 +48,7 @@
 		</form>
 	</div>
 	<script type="text/javascript" src="../js/zepto.min.js"></script>
-	<script type="text/javascript" src="../js/touch.js"></script>
+	<!--<script type="text/javascript" src="../js/touch.js"></script>-->
 	<script type="text/javascript" src="../js/layer.js"></script>
 	<script type="text/javascript">
 		mui.plusReady(function() {
@@ -67,7 +67,7 @@
 			});
 			
 			$('.location').on('touchend', function(e){
-				e.preventDefault();
+				e.preventDefault(); 
 			});
 			
 			$('#status').on('tap', function(e) {
@@ -91,6 +91,21 @@
 			});
 			
 			$('#status').on('touchend',function(e){
+				e.preventDefault();
+			});
+			
+			$('.add-vote').on('tap', function() {
+				var len = $('.vote-form .mui-input-row').length - 1;				
+				var str = '<div class="mui-input-row"><input type="password" value="" class="mui-input-clear" placeholder="选项' + (len + 1) +',请输入15字以内描述"><span class="mui-icon mui-icon-clear mui-hidden"></span><a href="javasript:;" class="delete-item mui-icon-closeempty"></a></div>';
+				$('.add-vote').before(str);
+			});
+			
+			$('.vote-form').on('tap','.delete-item', function(e){
+				$(this).parents('.mui-input-row').remove();
+				e.preventDefault();
+			})
+			
+			$('.add-vote').on('touchend',function(e) {
 				e.preventDefault();
 			});
 			

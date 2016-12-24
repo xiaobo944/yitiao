@@ -132,12 +132,16 @@ li{list-style: none;}
 .header-submit{background-color: #1b1b1b; color: #fff; border-radius: 17px; height: 30px;}
 .clear-input{display: block; width: 20px; height: 20px; background-image: url(../images/clearInput.png); background-repeat: no-repeat;    position: absolute;
 right: 18px;top: 50%;margin-top: -10px; background-size: contain;}
-.add-vote{background-color: #ededed; border: none; border: 0; border-radius: 28px;}
+.add-vote{background-color: #ededed; border: none; border: 0; border-radius: 28px; padding: 10px 0; font-size: 14px; margin-bottom: 20px;}
 .vote-form:after{background-color: transparent;}
+.vote-form .mui-input-row{height: 40px; line-height:40px; font-size: 14px;}
+.vote-form .mui-input-row input{height: 40px; font-size: 14px;}
+.vote-form .mui-input-row .mui-input-clear ~ .mui-icon-clear{top: 10px;}
+.vote-form .delete-item{position: absolute; width: 30px; height: 30px; z-index:999; right:0; line-height: 30px; text-align: center; font-size: 32px; top: 50%; transform: translateY(-50%);}
 .underline-header{border-bottom: 1px solid #ebebeb;}
 .sub-menu{width: 34px; height: 100%; background-image: url(../images/menu_points.png); margin-top: 18px; position: relative; background-repeat: no-repeat;} 
 .report{display: block; width: 100px; height: 30px; line-height: 30px; text-align: center; position: absolute; right: 0; top: 36px; color: #333333; font-size: 14px; z-index: 888; background-color: #fff; border-radius: 15px;}
-.mui-card-header-noline:after{background-color: transparent;}
+.mui-card-header-nolvote-formine:after{background-color: transparent;}
 .user-gender{width: 29px; height: 18px; background-image: url(../images/gender.png); background-repeat: no-repeat; background-size: contain;}
 .user-location{color: #cdcdcd;}
 .user-location-icon{float: left; font-size: 16px; color: #cdcdcd;}
@@ -218,9 +222,9 @@ right: 18px;top: 50%;margin-top: -10px; background-size: contain;}
 
 .report{display: none;}
 
-.ellipse{width: 65px; height: 25px; background-color: #f7f7f7; font-size: 12px; text-align: center; border-radius: 15px; border: 1px solid #dedede; line-height: 25px; color: #666666; position: relative;}
+.ellipse{width: 65px; height: 30px; background-color: #f7f7f7; font-size: 12px; text-align: center; border-radius: 15px; border: 1px solid #dedede; line-height: 30px; color: #666666; position: relative;}
 .ellipse.location{width: auto; padding-left: 20px; padding-right: 20px; position: relative; text-align: center;}
-.ellipse.location:after{content: ''; position: absolute; width: 16px; height: 12px; background: url(../images/location.png) no-repeat; left: 6px; top: 50%; margin-top: -8px; background-size: contain;}
+.ellipse.location:after{content: ''; position: absolute; width: 16px; height: 12px; background: url(../images/location.png) no-repeat; left: 6px; top: 50%; margin-top: -6px; background-size: contain;}
 .ellipse.location .del-location{position: absolute; width: 16px; height: inherit; right: 5px;}
 .ellipse.location .del-location:after{content: ""; position: absolute; background: url(../images/close.png) no-repeat; background-size: contain; top: 50%; left: 50%; transform: translate(-50%,-65%); height: 8px; width: 8px;}
 .ellipse.location.hide .del-location{display: none;}
