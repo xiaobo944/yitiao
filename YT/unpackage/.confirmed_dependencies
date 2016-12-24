@@ -79,7 +79,8 @@
       "js/touch.js",
       "css/layer.css",
       "js/layer.js",
-      "images/location_on.png"
+      "images/location_on.png",
+      "images/close.png"
     ],
     "refer": []
   },
@@ -95,7 +96,8 @@
       "js/layer.js",
       "js/touch.js",
       "css/layer.css",
-      "images/location_on.png"
+      "images/location_on.png",
+      "images/close.png"
     ],
     "refer": []
   }
