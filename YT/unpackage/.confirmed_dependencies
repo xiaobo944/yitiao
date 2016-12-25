@@ -151,7 +151,12 @@
       "images/pic_2.png",
       "images/msg.png",
       "images/bg.png",
-      "images/1.png"
+      "images/1.png",
+      "images/sx.png",
+      "images/jhy.png",
+      "images/gz.png",
+      "images/del_friend.png",
+      "images/unfollow.png"
     ],
     "refer": []
   }
