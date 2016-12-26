@@ -294,7 +294,7 @@ right: 18px;top: 50%;margin-top: -10px; background-size: contain;}
 .nav-ico-sx{background-image: url(../images/sx.png); background-size: contain;background-repeat: no-repeat;}
 .nav-ico-jhy{background-image: url(../images/jhy.png); background-size: contain;background-repeat: no-repeat;}
 .nav-ico-gz{background-image: url(../images/gz.png); background-size: contain;background-repeat: no-repeat;}
-.profile-bar{background-color: rgba(0,0,0,.8)}
+.profile-bar{background-color: rgba(0,0,0,.8); padding: 2px 0;}
 .profile-bar .mui-tab-label{color: #fff!important;}
 .profile-bar .mui-tab-item.active .mui-tab-label{color: #b3b3b3!important;}
 .profile-bar .mui-tab-item.active .nav-ico-jhy{background-image: url(../images/del_friend.png);}

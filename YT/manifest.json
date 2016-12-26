@@ -355,7 +355,16 @@
 					"images/jhy.png",
 					"images/gz.png",
 					"images/del_friend.png",
-					"images/unfollow.png"
+					"images/unfollow.png",
+					"js/czbox2.js",
+					"js/zepto.min.js",
+					"css/czbox.css",
+					"js/jquery.min.js",
+					"js/jquery.swipebox.min.js",
+					"img/icons.svg",
+					"img/icons.png",
+					"img/loader.gif",
+					"css/swipebox.min.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -372,7 +381,6 @@
 				"js/mui.js",
 				"images/sex_01_age.png",
 				"froumCont.html",
-				"js/jquery.min.js",
 				"images/tou_1.png",
 				"js/cropper.js",
 				"images/nav_01_active.png",
