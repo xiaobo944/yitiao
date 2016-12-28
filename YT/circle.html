@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/app.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body class="yt-conn">
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">圈子</h1>
+	    <a class="mui-icon mui-icon-camera mui-pull-right"></a>
+	</header>	
+	
+	<ul class="mui-table-view" id="circle-list">
+		<li class="mui-table-view-cell mui-media">
+	          <img class="mui-media-object mui-pull-left" src="images/avatar.png" class="circle-avatar">
+	            <div class="mui-media-body">
+	                <a href="#" class="name">名字</a>
+					<div class="circle-content">
+					<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？能和心爱的人一起睡觉，是件幸福的事情；</p>
+	                <img src="images/1.png" class="mui-card-media" alt="" />
+	                <p>1小时前</p>
+	                <div href="javascript:;" class="circle-like">
+	                	<div class="like-comment-btn">
+	                		<a href="javascript:;"><img src="images/white-heart.png" alt="" />赞</a>
+	                		<a href="javascript:;"><img src="images/comment.png"/>评论</a>
+	                	</div>
+	                </div>
+					</div>
+	                <div class="like-comments">
+	                	<div class="like">
+	                		<i class="green-heart"></i>
+	                		<span>苍井空</span>,<span>苍井空</span>,<span>苍井空</span>
+	                	</div>
+	                	<div class="comments">
+	                		<p>
+	                			<span class="name">波多:</span>啊啊啊啊啊啊啊啊啊啊啊啊
+	                		</p><p>
+	                			<span class="name">波多:</span>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+	                		</p>
+	                	</div>
+	                </div>
+	            </div>
+    	</li>
+    	<li class="mui-table-view-cell mui-media">
+	          <img class="mui-media-object mui-pull-left" src="images/avatar.png" class="circle-avatar">
+	            <div class="mui-media-body">
+	                <a href="#" class="name">名字</a>
+					<div class="circle-content">
+					<p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？能和心爱的人一起睡觉，是件幸福的事情；</p>
+	                <img src="images/1.png" class="mui-card-media" alt="" />
+	                <p>1小时前</p>
+	                <div href="javascript:;" class="circle-like">
+	                	<div class="like-comment-btn">
+	                		<a href="javascript:;"><img src="images/white-heart.png" alt="" />赞</a>
+	                		<a href="javascript:;"><img src="images/comment.png"/>评论</a>
+	                	</div>
+	                </div>
+					</div>
+	                <div class="like-comments">
+	                	<div class="like">
+	                		<i class="green-heart"></i>
+	                		<span>苍井空</span>,<span>苍井空</span>,<span>苍井空</span>
+	                	</div>
+	                	<div class="comments">
+	                		<p>
+	                			<span class="name">波多:</span>啊啊啊啊啊啊啊啊啊啊啊啊
+	                		</p><p>
+	                			<span class="name">波多:</span>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+	                		</p>
+	                	</div>
+	                </div>
+	            </div>
+    	</li>
+	</ul>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script>
+		mui.plusReady(function(){ 
+			
+			mui('.circle-content').on('tap','.circle-like',function(){
+				var $btn = $(this).children('.like-comment-btn');
+			 	if ($btn.css('display') === 'none') {
+			 		$btn.show();
+			 	} else {
+			 		$btn.hide();
+			 	}
+			}) 
+			
+		}); 
+		
+	</script>
+	
+	
+	
+</body>
+</html>

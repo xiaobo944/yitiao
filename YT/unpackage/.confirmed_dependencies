@@ -168,5 +168,32 @@
       "css/swipebox.min.css"
     ],
     "refer": []
+  },
+  "circle.html": {
+    "resources": [
+      "images/sex_02_age.png",
+      "images/user.png",
+      "images/x.png",
+      "images/jinghua.png",
+      "fonts/mui.ttf",
+      "images/tag_yuanlao.png",
+      "images/nav_02.png",
+      "css/mui.css",
+      "images/banner_01.jpg",
+      "images/nav_03.png",
+      "images/nav_01.png",
+      "images/area.png",
+      "images/nav_04.png",
+      "images/yan.png",
+      "images/pic_1.png",
+      "images/pic_3.png",
+      "js/mui.min.js",
+      "css/app.css",
+      "images/pic_2.png",
+      "images/msg.png",
+      "images/prture.png",
+      "images/tou_1.png"
+    ],
+    "refer": []
   }
 }
