@@ -195,5 +195,36 @@
       "images/tou_1.png"
     ],
     "refer": []
+  },
+  "messages.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "images/avatar.png",
+      "images/add_friend.png",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "withdraw.html": {
+    "resources": [
+      "css/app.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "mycollection.html": {
+    "resources": [
+      "images/wei.png",
+      "js/mui.min.js",
+      "css/app.css",
+      "images/graphic.png",
+      "fonts/mui.ttf",
+      "images/eye.png",
+      "css/mui.css"
+    ]
   }
 }

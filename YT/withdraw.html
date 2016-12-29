@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/app.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+
+	<body>
+		<!--
+			
+			提现页面
+			
+		-->
+		<header class="mui-bar mui-bar-nav login-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">提现</h1>
+	    	<a href="javascript:;" class="mui-pull-right withdraw-log">提现记录</a>
+		</header>
+		
+		<div class="mui-content">
+			<div class="mui-row withdraw-num">
+				<h2>可提现金额</h2>
+				<span>￥2800.00</span>
+			</div>
+		</div>
+		
+		<form action="#" class="mui-input-group withdraw-form">
+			<div class="mui-input-row">
+		        <label>支付宝账号</label>
+		    <input type="text" class="mui-input-clear" placeholder="请输入支付宝账号">
+		    </div>
+		    <div class="mui-input-row">
+		        <label>支付宝实名</label>
+		        <input type="text" class="mui-input-clear" placeholder="请输入支付宝实名">
+		    </div>
+		    <div class="mui-button-row">
+		        <button type="button" class="mui-btn withdraw-btn" >提现</button>
+		    </div>
+		    <div class="withdraw-message">
+		    	提现金额将1~3个工作日到账
+		    </div>
+		</form>
+		
+		<script type="text/javascript">
+			mui.plusReady(function() {
+				//
+				plus.screen.lockOrientation("portrait-primary");
+
+				document.getElementById("loginBtn").addEventListener('tap', function() {
+					mui.openWindow('login.html', 'index', {})
+				});
+
+			});
+		</script>
+
+		<script type="text/javascript">
+			var countdown = 60;
+
+			function settime(val) {
+				if(countdown == 0) { 
+					//val.removeAttribute("disabled");
+					val.innerHTML = "免费获取验证码";
+					countdown = 60;
+				} else {
+					val.setAttribute("disabled", true);
+					val.value = countdown + "S后重新获取";
+					countdown--;
+				}
+				setTimeout(function() {
+					settime(val)
+				}, 1000)
+			}
+		</script>
+
+	</body>
+
+</html>

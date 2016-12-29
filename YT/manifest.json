@@ -10,7 +10,7 @@
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "messages.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "mycollection.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "",/*开发者名称*/
 		"email": "",/*开发者邮箱地址*/
@@ -393,6 +393,41 @@
 					"images/msg.png",
 					"images/prture.png",
 					"images/tou_1.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"messages.html": {
+				"resources": [
+					"css/app.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"images/avatar.png",
+					"images/add_friend.png",
+					"css/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"withdraw.html": {
+				"resources": [
+					"css/app.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mycollection.html": {
+				"resources": [
+					"images/wei.png",
+					"js/mui.min.js",
+					"css/app.css",
+					"images/graphic.png",
+					"fonts/mui.ttf",
+					"images/eye.png",
+					"css/mui.css"
 				],
 				"refer": [],
 				"priority": 0

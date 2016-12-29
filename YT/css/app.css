@@ -333,3 +333,39 @@ right: 18px;top: 50%;margin-top: -10px; background-size: contain;}
 #message-list .message-num{width: 16px; height: 16px; text-align: center; color: #fff; background: #ff2352; line-height: 20px; position: absolute; border-radius: 50%; font-size: 10px; right: 5px;}
 .add-friend{width: 20px; height: 20px; margin-top: 10px;}
 .add-friend > img{width: 100%; height: 100%;}
+
+
+.withdraw-log{color: #333333; margin-top: 10px;}
+.withdraw-num{height: 134px; text-align: center; border-bottom: 1px solid #ebebeb; border-top: 1px solid #ebebeb; padding-top: 35px;}
+.withdraw-num h2 {color: #333333; font-weight: normal; font-size: 20px;}
+.withdraw-num span{color: #d1ae09; font-weight: 500; font-size: 40px; margin-top: 5px; display: inline-block;}
+.withdraw-form{background-color: #fff; padding: 20px 0;}
+.withdraw-btn{ width: 80%; height: 46px; background-color: #1c1c1c; border-radius: 23px; color: #fff; font-size: 16px;}
+.withdraw-btn.disabled{background-color: #808080;}
+.withdraw-form .mui-input-row{padding: 0 10px; margin-bottom: 10px;}
+.withdraw-form .mui-input-row label{width: 25%; height: 46px; line-height: 46px; padding: 0; }
+.withdraw-form input[type=text] { height: 46px; border: 1px solid #ededed; border-radius: 23px; text-align: center; font-size: 14px; width: 75%;}
+.withdraw-form .mui-input-row:after{display: none;}
+.withdraw-form:after,.withdraw-form:before{display: none;}
+.withdraw-message{text-align: center; font-size: 14px; color: #c7c7c7; margin-top: 10px;}
+
+.wallet-withdraw-num{border: none;}
+.wallet-withdraw-num h2 {font-size: 18px;}
+.wallet-withdraw-num span { margin-top: 15px;}
+.waller-help{position: fixed; bottom: 35px; text-align: center; display: block; width: 100%; font-size: 14px; color: #3886c8;}
+
+.collection-list{background-color: #fafafa; margin-top: 44px;}
+.collection-list .title{font-size: 14px; color: #939393; padding: 0px 10px; background-color: #e5e5e5; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; position: absolute; top: 0; height: 28px; line-height: 30px;}
+.collection-list .status{padding: 0px 10px; background-color: #fc761d; font-size: 12px; color: #fff; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; position: absolute; top: 0; right: 0; height: 24px; line-height: 24px;}
+.collection-list article{margin-top: 30px; color: #969696; font-size: 14px; }
+.collection-list article h2 {font-size: 18px; color: #333333; font-weight: normal;}
+.collection-list .time{font-size: 14px; color:#969696;}
+.collection-list > li{border-top: 1px solid #ebebeb;}
+.collection-list > li:after{display: none;}
+.collection-info{margin-top: 10px;}
+.collection-info .views,.collection-info .comments{font-size: 14px; color: #999999; margin-right: 5 px;}
+.collection-info .views{margin-left: 10px;}
+.collection-info .views img{display: inline-block; height: 12px; margin-right: 5px;}
+.collection-info .comments img{display: inline-block; width: 16px; height: 14px; margin-right: 5px;}
+.collection-list .vote-collection .icon-graphic{display: inline-block; width: 16px; height: 16px; background: url(../images/graphic.png) no-repeat; background-size: contain; margin-right: 10px;}
+.collection-edit{ height: 28px; background-color: #1b1b1b; color: #fff; border-radius: 14px; padding: 0 10px; line-height: 30px; margin-top: 6px;}
